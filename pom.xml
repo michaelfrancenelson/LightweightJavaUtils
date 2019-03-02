@@ -2,9 +2,9 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>LightweightJavaUtils</groupId>
+	<groupId>michaelfrancenelson</groupId>
 	<artifactId>LightweightJavaUtils</artifactId>
-	<version>0.0.2</version>
+	<version>1.0.1</version>
 	<properties>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -61,27 +61,9 @@
 					<skipTests>${skip.tests}</skipTests>
 				</configuration>
 			</plugin>
-
-			<plugin>
-				<artifactId>maven-deploy-plugin</artifactId>
-				<version>${maven.deploy.plugin.version}</version>
-				<configuration>
-					<altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
-					<skipTests>${skip.tests}</skipTests>
-				</configuration>
-			</plugin>
-
 		</plugins>
 
 	</build>
-
-	<distributionManagement>
-		<repository>
-			<id>internal.repo</id>
-			<name>Temporary Staging Repository</name>
-			<url>file://${project.build.directory}/mvn-repo</url>
-		</repository>
-	</distributionManagement>
 
 	<dependencies>
 		<dependency>
